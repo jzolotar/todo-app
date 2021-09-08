@@ -46,7 +46,9 @@ p {
   margin: 0;
   padding: 0;
 }
-
+ul {
+  list-style: none;
+}
 input {
   padding: 14px 0px;
   border-radius: 5px;
@@ -61,9 +63,18 @@ input:focus {
 }
 
 .circle {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   border: 2px solid $veryDarkGrayishBlue;
   margin-left: 12px;
+}
+
+label {
+  display: block;
+  padding: 13px 30px;
+}
+
+.task--desc {
+  margin-left: 1.2rem;
 }
