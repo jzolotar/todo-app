@@ -43,19 +43,12 @@ p {
   height: 15vh;
   background: url("../../images/bg-mobile-dark.jpg") no-repeat center center/cover;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+
+.header__wrapper {
+  margin: 0 auto;
+  max-width: 28rem;
+  padding: 15px 30px;
 }
 
 .header__info {
@@ -66,17 +59,16 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 0.3rem;
 }
 
 .header__input {
-  min-width: 50%;
-  padding: 10px 20px;
-  border-radius: 50px;
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 5px;
   border: none;
-  margin: 0 auto;
 }
 /*# sourceMappingURL=style.css.map */

@@ -9,22 +9,25 @@
   </head>
   <body>
     <section class="header">
-      <div class="header__info">
-        <h1 class="header_title">TODO</h1>
-        <img
-          class="header__icon"
-          src="./images/icon-sun.svg"
-          alt="switch to light mode"
+      <div class="header__wrapper">
+        <div class="header__info">
+          <h1 class="header_title">TODO</h1>
+          <img
+            class="header__icon"
+            src="./images/icon-sun.svg"
+            alt="switch to light mode"
+          />
+        </div>
+
+        <input
+          class="header__input"
+          type="text"
+          id="task"
+          placeholder="Create a new task..."
         />
       </div>
-
-      <input
-        class="header__input"
-        type="text"
-        id="task"
-        placeholder="Create a new task..."
-      />
     </section>
+    <main class="todo"></main>
     <script src="./app/js/script.js"></script>
   </body>
 </html>
