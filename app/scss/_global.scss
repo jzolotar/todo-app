@@ -15,12 +15,14 @@ body {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.125rem;
   line-height: 1.4;
-  background-color: #333;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+  background-color: $veryDarkBlue;
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   justify-content: center;
+  height: 100vh;
+  color: #f4f4f4;
+  margin: 0;
 }
 
 h1,
@@ -38,8 +40,4 @@ a {
 p {
   margin: 0;
   padding: 0;
-}
-img {
-  display: block;
-  width: 100%;
 }

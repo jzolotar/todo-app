@@ -1,0 +1,26 @@
+.header {
+  height: 15vh;
+  background: url("../../images/bg-mobile-dark.jpg") no-repeat center center /
+    cover;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 0.3rem;
+  }
+
+  &__input {
+    min-width: 50%;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+    margin: 0 auto;
+  }
+}

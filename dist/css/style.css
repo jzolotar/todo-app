@@ -16,21 +16,10 @@ body {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.125rem;
   line-height: 1.4;
-  background-color: #333;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  min-height: 100vh;
+  background-color: #161722;
+  height: 100vh;
+  color: #f4f4f4;
+  margin: 0;
 }
 
 h1,
@@ -50,8 +39,44 @@ p {
   padding: 0;
 }
 
-img {
-  display: block;
+.header {
+  height: 15vh;
+  background: url("../../images/bg-mobile-dark.jpg") no-repeat center center/cover;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header__info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-bottom: 0.3rem;
+}
+
+.header__input {
+  min-width: 50%;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: none;
+  margin: 0 auto;
 }
 /*# sourceMappingURL=style.css.map */
