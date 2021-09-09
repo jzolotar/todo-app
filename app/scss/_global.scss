@@ -61,7 +61,6 @@ input {
 }
 input:focus {
   outline: none;
-  outline-width: 0;
 }
 
 .circle {
@@ -80,6 +79,6 @@ label {
 }
 
 .task--desc {
-  margin-left: 2.5rem;
+  margin-left: 2.2rem;
   font-size: 1rem;
 }

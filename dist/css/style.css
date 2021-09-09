@@ -61,7 +61,6 @@ input {
 
 input:focus {
   outline: none;
-  outline-width: 0;
 }
 
 .circle {
@@ -82,7 +81,7 @@ label {
 }
 
 .task--desc {
-  margin-left: 2.5rem;
+  margin-left: 2.2rem;
   font-size: 1rem;
 }
 
@@ -183,12 +182,14 @@ label {
 
 .list__task .checkmark {
   position: absolute;
-  top: 17%;
-  left: 11px;
   height: 25px;
   width: 25px;
   border-radius: 50%;
   border: 2px solid #777a92;
+  top: 50%;
+  left: 24px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .list__task .checkmark:after {
