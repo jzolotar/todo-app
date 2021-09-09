@@ -109,4 +109,72 @@ input:focus {
 .header__input {
   width: 100%;
 }
+
+.list {
+  margin-top: 1rem;
+}
+
+.list__wrapper {
+  margin: 0 auto;
+  max-width: 36rem;
+  padding: 0px 30px;
+}
+
+.list__background {
+  text-align: left;
+  border-radius: 5px;
+  background-color: #25273c;
+}
+
+.list__task {
+  border-bottom: 1px solid #777a92;
+  position: relative;
+  cursor: pointer;
+}
+
+.list__task input:checked ~ .checkmark {
+  background: -webkit-gradient(linear, left top, right top, from(#57ddff), to(#c058f3));
+  background: linear-gradient(to right, #57ddff, #c058f3);
+}
+
+.list__task .checkmark:after {
+  left: 8px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.list__task input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.list__task input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.list__task .checkmark {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  border: 2px solid #777a92;
+  top: 50%;
+  left: 24px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.list__task .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
 /*# sourceMappingURL=style.css.map */
