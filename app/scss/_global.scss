@@ -56,6 +56,8 @@ input {
   background-color: $veryDarkDesaturatedBlue;
   color: $darkGrayishBlue;
   text-align: left;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
 }
 input:focus {
   outline: none;
@@ -69,12 +71,15 @@ input:focus {
   border: 2px solid $veryDarkGrayishBlue;
   margin-left: 12px;
 }
-
+ul {
+  padding: 0;
+}
 label {
   display: block;
-  padding: 13px 30px;
+  padding: 8px 14px;
 }
 
 .task--desc {
-  margin-left: 1.2rem;
+  margin-left: 2.5rem;
+  font-size: 1rem;
 }

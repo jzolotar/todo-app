@@ -55,6 +55,8 @@ input {
   background-color: #25273c;
   color: #777a92;
   text-align: left;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
 }
 
 input:focus {
@@ -70,13 +72,18 @@ input:focus {
   margin-left: 12px;
 }
 
+ul {
+  padding: 0;
+}
+
 label {
   display: block;
-  padding: 13px 30px;
+  padding: 8px 14px;
 }
 
 .task--desc {
-  margin-left: 1.2rem;
+  margin-left: 2.5rem;
+  font-size: 1rem;
 }
 
 .header {
@@ -122,6 +129,10 @@ label {
 .header__input {
   width: 100%;
   padding-left: 8px;
+}
+
+.list {
+  margin-top: 1rem;
 }
 
 .list__wrapper {
@@ -172,7 +183,7 @@ label {
 
 .list__task .checkmark {
   position: absolute;
-  top: 25%;
+  top: 17%;
   left: 11px;
   height: 25px;
   width: 25px;
