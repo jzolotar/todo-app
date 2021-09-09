@@ -69,6 +69,7 @@ input:focus {
   border-radius: 50%;
   border: 2px solid $veryDarkGrayishBlue;
   margin-left: 12px;
+  display: inline-block;
 }
 ul {
   padding: 0;
@@ -79,6 +80,6 @@ label {
 }
 
 .task--desc {
-  margin-left: 2.2rem;
   font-size: 1rem;
+  text-align: left;
 }

@@ -12,8 +12,29 @@
   }
 
   &__task {
+    padding: 0.6625rem 0;
     border-bottom: 1px solid $darkGrayishBlue;
     position: relative;
     cursor: pointer;
+    display: grid;
+    grid-template-columns: 15% auto;
+    align-items: center;
+
+    // hide browser's deafult checkbox
+    & input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+    //mouseover add border color
+    &:hover .circle {
+      border-color: linear-gradient(
+        to right,
+        hsl(192, 100%, 67%),
+        hsl(280, 87%, 65%)
+      );
+    }
   }
 }

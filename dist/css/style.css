@@ -69,6 +69,7 @@ input:focus {
   border-radius: 50%;
   border: 2px solid #4d5066;
   margin-left: 12px;
+  display: inline-block;
 }
 
 ul {
@@ -81,8 +82,8 @@ label {
 }
 
 .task--desc {
-  margin-left: 2.2rem;
   font-size: 1rem;
+  text-align: left;
 }
 
 .header {
@@ -127,7 +128,6 @@ label {
 
 .header__input {
   width: 100%;
-  padding-left: 8px;
 }
 
 .list {
@@ -147,8 +147,28 @@ label {
 }
 
 .list__task {
+  padding: 0.6625rem 0;
   border-bottom: 1px solid #777a92;
   position: relative;
   cursor: pointer;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 15% auto;
+      grid-template-columns: 15% auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.list__task input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.list__task:hover .circle {
+  border-color: linear-gradient(to right, #57ddff, #c058f3);
 }
 /*# sourceMappingURL=style.css.map */
