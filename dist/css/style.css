@@ -64,12 +64,19 @@ input:focus {
 }
 
 .circle {
+  position: relative;
   width: 25px;
   height: 25px;
   border-radius: 50%;
   border: 2px solid #4d5066;
   margin-left: 12px;
   display: inline-block;
+}
+
+.circle::after {
+  content: "";
+  position: absolute;
+  display: none;
 }
 
 ul {
@@ -153,8 +160,8 @@ label {
   cursor: pointer;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 15% auto;
-      grid-template-columns: 15% auto;
+  -ms-grid-columns: 15% auto 15%;
+      grid-template-columns: 15% auto 15%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -170,5 +177,25 @@ label {
 
 .list__task:hover .circle {
   border-color: linear-gradient(to right, #57ddff, #c058f3);
+}
+
+.list__task input:checked ~ .circle {
+  background: -webkit-gradient(linear, left top, right top, from(#57ddff), to(#c058f3));
+  background: linear-gradient(to right, #57ddff, #c058f3);
+}
+
+.list__task input:checked ~ .circle::after {
+  display: block;
+}
+
+.list__task .circle::after {
+  left: 8.5px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 /*# sourceMappingURL=style.css.map */

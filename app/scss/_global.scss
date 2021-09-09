@@ -64,12 +64,19 @@ input:focus {
 }
 
 .circle {
+  position: relative;
   width: 25px;
   height: 25px;
   border-radius: 50%;
   border: 2px solid $veryDarkGrayishBlue;
   margin-left: 12px;
   display: inline-block;
+  //create checkmark and hide it when input not checked
+  &::after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
 }
 ul {
   padding: 0;

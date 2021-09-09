@@ -17,7 +17,7 @@
     position: relative;
     cursor: pointer;
     display: grid;
-    grid-template-columns: 15% auto;
+    grid-template-columns: 15% auto 15%;
     align-items: center;
 
     // hide browser's deafult checkbox
@@ -28,6 +28,7 @@
       height: 0;
       width: 0;
     }
+
     //mouseover add border color
     &:hover .circle {
       border-color: linear-gradient(
@@ -35,6 +36,33 @@
         hsl(192, 100%, 67%),
         hsl(280, 87%, 65%)
       );
+    }
+
+    //add bg when input checked
+    & input:checked ~ .circle {
+      background: linear-gradient(
+        to right,
+        hsl(192, 100%, 67%),
+        hsl(280, 87%, 65%)
+      );
+    }
+
+    //show the checkmark when checked
+    & input:checked ~ .circle::after {
+      display: block;
+    }
+
+    //style checkmark
+    & .circle::after {
+      left: 8.5px;
+      top: 5px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
     }
   }
 }
