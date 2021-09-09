@@ -44,6 +44,10 @@ p {
   padding: 0;
 }
 
+ul {
+  list-style: none;
+}
+
 input {
   padding: 14px 0px;
   border-radius: 5px;
@@ -51,30 +55,45 @@ input {
   background-color: #25273c;
   color: #777a92;
   text-align: left;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
 }
 
 input:focus {
   outline: none;
-  outline-width: 0;
 }
 
 .circle {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   border: 2px solid #4d5066;
   margin-left: 12px;
 }
 
+ul {
+  padding: 0;
+}
+
+label {
+  display: block;
+  padding: 8px 14px;
+}
+
+.task--desc {
+  margin-left: 2.2rem;
+  font-size: 1rem;
+}
+
 .header {
-  height: 20vh;
+  height: 22vh;
   background: url("../../images/bg-mobile-dark.jpg") no-repeat center center/cover;
   width: 100%;
 }
 
 .header__wrapper {
   margin: 0 auto;
-  max-width: 28rem;
+  max-width: 36rem;
   padding: 0px 30px;
   padding-top: 25px;
 }
@@ -83,8 +102,8 @@ input:focus {
   width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 15% auto;
-      grid-template-columns: 15% auto;
+  -ms-grid-columns: 14% auto;
+      grid-template-columns: 14% auto;
   background-color: #25273c;
   border-radius: 5px;
   -webkit-box-align: center;
@@ -103,11 +122,80 @@ input:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 0.3rem;
+  margin-bottom: 1.5rem;
 }
 
 .header__input {
   width: 100%;
+  padding-left: 8px;
+}
+
+.list {
+  margin-top: 1rem;
+}
+
+.list__wrapper {
+  margin: 0 auto;
+  max-width: 36rem;
+  padding: 0px 30px;
+}
+
+.list__background {
+  text-align: left;
+  border-radius: 5px;
+  background-color: #25273c;
+}
+
+.list__task {
+  border-bottom: 1px solid #777a92;
+  position: relative;
+  cursor: pointer;
+}
+
+.list__task input:checked ~ .checkmark {
+  background: -webkit-gradient(linear, left top, right top, from(#57ddff), to(#c058f3));
+  background: linear-gradient(to right, #57ddff, #c058f3);
+}
+
+.list__task .checkmark:after {
+  left: 8px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.list__task input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.list__task input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.list__task .checkmark {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  border: 2px solid #777a92;
+  top: 50%;
+  left: 24px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.list__task .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
 }
 
 .list {
