@@ -90,3 +90,13 @@ label {
   font-size: 1rem;
   text-align: left;
 }
+
+.remove {
+  justify-self: center;
+  align-self: center;
+  display: none;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}

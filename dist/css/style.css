@@ -93,6 +93,20 @@ label {
   text-align: left;
 }
 
+.remove {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  display: none;
+}
+
+.remove:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
 .header {
   height: 22vh;
   background: url("../../images/bg-mobile-dark.jpg") no-repeat center center/cover;
@@ -165,6 +179,12 @@ label {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.list__task:hover .remove {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .list__task input {

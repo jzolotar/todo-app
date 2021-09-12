@@ -20,6 +20,12 @@
     grid-template-columns: 15% auto 15%;
     align-items: center;
 
+    &:hover {
+      .remove {
+        display: flex;
+      }
+    }
+
     // hide browser's deafult checkbox
     & input {
       position: absolute;
