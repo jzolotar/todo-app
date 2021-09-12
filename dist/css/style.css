@@ -184,6 +184,11 @@ label {
   background: linear-gradient(to right, #57ddff, #c058f3);
 }
 
+.list__task input:checked ~ .task--desc {
+  text-decoration: line-through;
+  color: #777a92;
+}
+
 .list__task input:checked ~ .circle::after {
   display: block;
 }

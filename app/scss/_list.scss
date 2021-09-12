@@ -46,6 +46,11 @@
         hsl(280, 87%, 65%)
       );
     }
+    //add marked text
+    & input:checked ~ .task--desc {
+      text-decoration: line-through;
+      color: $darkGrayishBlue;
+    }
 
     //show the checkmark when checked
     & input:checked ~ .circle::after {
