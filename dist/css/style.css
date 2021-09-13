@@ -56,7 +56,7 @@ input {
   color: #777a92;
   text-align: left;
   font-family: "Josefin Sans", sans-serif;
-  font-size: 1rem;
+  font-size: 0.92rem;
 }
 
 input:focus {
@@ -89,7 +89,7 @@ label {
 }
 
 .task--desc {
-  font-size: 1rem;
+  font-size: 0.92rem;
   text-align: left;
 }
 
@@ -222,5 +222,44 @@ label {
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.filters__wrapper {
+  margin: 0 auto;
+  max-width: 36rem;
+  padding: 0px 30px;
+}
+
+.filters__side {
+  border-radius: 5px;
+  background-color: #25273c;
+  padding: 14px 0.7rem;
+  margin-bottom: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 0.85rem;
+}
+
+.filters__center {
+  border-radius: 5px;
+  background-color: #25273c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+  padding: 14px 0.7rem;
+}
+
+.filters__filter {
+  font-size: 0.92rem;
 }
 /*# sourceMappingURL=style.css.map */
