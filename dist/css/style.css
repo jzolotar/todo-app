@@ -46,6 +46,7 @@ p {
 
 ul {
   list-style: none;
+  margin-bottom: 0;
 }
 
 input {
@@ -224,6 +225,11 @@ label {
   transform: rotate(45deg);
 }
 
+.filters {
+  color: #777a92;
+  position: relative;
+}
+
 .filters__wrapper {
   margin: 0 auto;
   max-width: 36rem;
@@ -244,22 +250,52 @@ label {
   font-size: 0.85rem;
 }
 
+@media (min-width: 40em) {
+  .filters__side {
+    font-size: 0.92rem;
+  }
+}
+
 .filters__center {
   border-radius: 5px;
   background-color: #25273c;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
   text-align: center;
+  gap: 0.8rem;
   padding: 14px 0.7rem;
+}
+
+@media (min-width: 40em) {
+  .filters__center {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 0.85rem;
+    background-color: transparent;
+  }
 }
 
 .filters__filter {
   font-size: 0.92rem;
+  cursor: pointer;
+}
+
+@media (min-width: 40em) {
+  .filters__filter {
+    font-size: 0.92rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
