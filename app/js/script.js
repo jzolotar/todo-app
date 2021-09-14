@@ -42,5 +42,5 @@ function clearInput() {
 //function remove task from list
 
 function removeItem(elem) {
-  elem.remove();
+  elem.parentElement.remove();
 }
