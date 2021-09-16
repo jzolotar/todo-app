@@ -108,6 +108,10 @@ label {
           transform: scale(1.2);
 }
 
+.filter--on {
+  color: #3a7bfd;
+}
+
 .header {
   height: 22vh;
   background: url("../../images/bg-mobile-dark.jpg") no-repeat center center/cover;
