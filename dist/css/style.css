@@ -112,6 +112,10 @@ label {
   color: #3a7bfd;
 }
 
+.hide {
+  display: none;
+}
+
 .header {
   height: 22vh;
   background: url("../../images/bg-mobile-dark.jpg") no-repeat center center/cover;

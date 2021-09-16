@@ -1,5 +1,5 @@
 // global variables
-const taskInput = document.querySelector(".header__input");
+const taskName = document.querySelector(".header__input");
 const taskList = document.querySelector(".list__background");
 const filtersList = document.querySelector(".filters__center");
 const todoElem = document.querySelector(".todo__elem");
@@ -9,13 +9,13 @@ let todoId = 0;
 let currentFilter = "all";
 
 // add task to list
-taskInput.addEventListener("keypress", (e) => {
+taskName.addEventListener("keypress", (e) => {
   if (e.charCode === 13) {
-    if (taskInput.value.replace(/ /g, "").length <= 0) {
+    if (taskName.value.replace(/ /g, "").length <= 0) {
       alert("Please fill in the task name");
     }
-    if (taskInput.value != "") {
-      createTask(taskInput.value);
+    if (taskName.value != "") {
+      createTask(taskName.value);
       clearInput();
     }
   }
@@ -25,6 +25,16 @@ taskInput.addEventListener("keypress", (e) => {
 taskList.addEventListener("click", (e) => {
   if (e.target.classList.contains("remove")) {
     removeItem(e.target.parentElement);
+  }
+  if (e.target.classList.contains("list__task")) {
+    toggleCompleted(e.target);
+  }
+  if (
+    e.target.classList.contains("circle") ||
+    e.target.classList.contains("task--desc")
+  ) {
+    // toggleCompleted(e.target.parentElement);
+    toggleCompleted(e.target.parentElement);
   }
 });
 
@@ -40,18 +50,38 @@ function createTask(text) {
         <img class= "remove" src="./images/icon-cross.svg" alt=""/>
     </label>
   `;
+  elem.id = todoId;
+  todoId++;
   todoArr.push(elem);
   taskList.appendChild(elem);
 }
 
 //clear input field
 function clearInput() {
-  taskInput.value = "";
+  taskName.value = "";
 }
 
-//function remove task from list
-
+//remove task
 function removeItem(elem) {
+  //remove html markup
+  console.log(elem.parentElement);
   elem.parentElement.remove();
-  todoArr;
+  //remove elem from todoArr list
+  todoArr = todoArr.filter((li) => {
+    return li != elem.parentElement;
+  });
+}
+
+//toggle completed class
+function toggleCompleted(elem) {
+  // if elem is li
+  if (elem.classList.contains("todo__elem")) {
+    elem.classList.toggle("completed");
+    console.log(elem);
+  }
+  // else
+  else {
+    elem.parentElement.classList.toggle("completed");
+    console.log(elem.parentElement);
+  }
 }
