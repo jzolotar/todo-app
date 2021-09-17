@@ -74,14 +74,38 @@ function removeItem(elem) {
 
 //toggle completed class
 function toggleCompleted(elem) {
-  // if elem is li
+  // check if elem is li
   if (elem.classList.contains("todo__elem")) {
     elem.classList.toggle("completed");
     console.log(elem);
   }
-  // else
+  // for any other element we need to use .parentElement
   else {
     elem.parentElement.classList.toggle("completed");
     console.log(elem.parentElement);
   }
+}
+
+//display active
+function displayActive() {
+  todoArr.forEach((elem) => {
+    if (elem.classList.contains("completed")) elem.classList.add("hide");
+  });
+}
+
+//display completed
+function displayCompleted() {
+  todoArr.forEach((elem) => {
+    if (elem.classList.contains("completed")) elem.classList.remove("hide");
+    if (!elem.classList.contains("completed")) elem.classList.add("hide");
+  });
+}
+
+//display all
+function displayAll() {
+  todoArr.forEach((elem) => {
+    if (elem.classList.contains("hide")) {
+      elem.classList.remove("hide");
+    }
+  });
 }
