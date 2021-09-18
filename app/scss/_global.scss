@@ -96,6 +96,9 @@ label {
   justify-self: center;
   align-self: center;
   display: none;
+  @include breakpoint-down(medium) {
+    display: block;
+  }
 
   &:hover {
     transform: scale(1.2);

@@ -103,6 +103,12 @@ label {
   display: none;
 }
 
+@media (max-width: 63.9375em) {
+  .remove {
+    display: block;
+  }
+}
+
 .remove:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
