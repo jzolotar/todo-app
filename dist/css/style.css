@@ -116,6 +116,10 @@ label {
   display: none;
 }
 
+.delete--completed {
+  cursor: pointer;
+}
+
 .header {
   height: 22vh;
   background: url("../../images/bg-mobile-dark.jpg") no-repeat center center/cover;

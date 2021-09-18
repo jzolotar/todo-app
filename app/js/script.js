@@ -1,8 +1,10 @@
 // global variables
 const taskName = document.querySelector(".header__input");
 const taskList = document.querySelector(".list__background");
-const filtersList = document.querySelector(".filters__center");
+const filters = document.querySelector(".filters");
+const filtersStatus = document.querySelectorAll(".filters__filter");
 const todoElem = document.querySelector(".todo__elem");
+const btnClearCompleted = document.querySelector("delete--completed");
 
 let todoArr = [];
 let todoId = 0;
@@ -38,6 +40,29 @@ taskList.addEventListener("click", (e) => {
   }
 });
 
+//set filters / delete completed tasks
+filters.addEventListener("click", (e) => {
+  // filter by active
+  if (e.target.classList.contains("filter--active")) {
+    displayActive();
+    updateFiltering(e.target);
+  }
+  //filter by completed
+  if (e.target.classList.contains("filter--completed")) {
+    displayCompleted();
+    updateFiltering(e.target);
+  }
+  //filter by all
+  if (e.target.classList.contains("filter--all")) {
+    displayAll();
+    updateFiltering(e.target);
+  }
+  //remove all completed
+  if (e.target.classList.contains("delete--completed")) {
+    deleteCompleted();
+  }
+});
+
 //function add task to list
 function createTask(text) {
   const elem = document.createElement("li");
@@ -64,8 +89,17 @@ function clearInput() {
 //remove task
 function removeItem(elem) {
   //remove html markup
-  console.log(elem.parentElement);
   elem.parentElement.remove();
+  //remove elem from todoArr list
+  todoArr = todoArr.filter((li) => {
+    return li != elem.parentElement;
+  });
+}
+
+//remove completed task
+function removeCompletedItem(elem) {
+  //remove html markup
+  elem.remove();
   //remove elem from todoArr list
   todoArr = todoArr.filter((li) => {
     return li != elem.parentElement;
@@ -77,12 +111,10 @@ function toggleCompleted(elem) {
   // check if elem is li
   if (elem.classList.contains("todo__elem")) {
     elem.classList.toggle("completed");
-    console.log(elem);
   }
   // for any other element we need to use .parentElement
   else {
     elem.parentElement.classList.toggle("completed");
-    console.log(elem.parentElement);
   }
 }
 
@@ -90,6 +122,11 @@ function toggleCompleted(elem) {
 function displayActive() {
   todoArr.forEach((elem) => {
     if (elem.classList.contains("completed")) elem.classList.add("hide");
+    if (
+      elem.classList.contains("hide") &&
+      !elem.classList.contains("completed")
+    )
+      elem.classList.remove("hide");
   });
 }
 
@@ -107,5 +144,25 @@ function displayAll() {
     if (elem.classList.contains("hide")) {
       elem.classList.remove("hide");
     }
+  });
+}
+
+//update filter
+function updateFiltering(target) {
+  filtersStatus.forEach((elem) => {
+    if (elem.classList.contains("filter--on") && elem != target) {
+      elem.classList.remove("filter--on");
+    }
+    if (!elem.classList.contains("filter--on") && elem === target) {
+      elem.classList.add("filter--on");
+    }
+  });
+}
+
+//delete completed tasks
+function deleteCompleted() {
+  todoArr.forEach((elem) => {
+    console.log(elem);
+    if (elem.classList.contains("completed")) removeCompletedItem(elem);
   });
 }
