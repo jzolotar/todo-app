@@ -28,7 +28,7 @@ taskName.addEventListener("keypress", (e) => {
   }
 });
 
-//toggle completed class / remove task from list
+// add/remove completed class to html element & remove task from list
 taskList.addEventListener("click", (e) => {
   if (e.target.classList.contains("remove")) {
     removeItem(e.target.parentElement);
@@ -45,30 +45,30 @@ taskList.addEventListener("click", (e) => {
   }
 });
 
-//set filters / delete completed tasks
+// set filters / delete completed tasks
 filters.addEventListener("click", (e) => {
   // filter by active
   if (e.target.classList.contains("filter--active")) {
     displayActive();
     updateFiltering(e.target);
   }
-  //filter by completed
+  // filter by completed
   if (e.target.classList.contains("filter--completed")) {
     displayCompleted();
     updateFiltering(e.target);
   }
-  //filter by all
+  // filter by all
   if (e.target.classList.contains("filter--all")) {
     displayAll();
     updateFiltering(e.target);
   }
-  //remove all completed
+  // remove all completed
   if (e.target.classList.contains("delete--completed")) {
     deleteCompleted();
   }
 });
 
-//function add task to list
+// function add task to list
 function createTask(text) {
   const elem = document.createElement("li");
   elem.classList.add("todo__elem");
@@ -86,12 +86,12 @@ function createTask(text) {
   taskList.appendChild(elem);
 }
 
-//clear input field
+// clear input field
 function clearInput() {
   taskName.value = "";
 }
 
-//remove task
+// remove task
 function removeItem(elem) {
   //remove html markup
   elem.parentElement.remove();
@@ -101,9 +101,9 @@ function removeItem(elem) {
   });
 }
 
-//remove completed task
+// remove completed task
 function removeCompletedItem(elem) {
-  //remove html markup
+  // remove html markup
   elem.remove();
   //remove elem from todoArr list
   todoArr = todoArr.filter((li) => {
@@ -129,7 +129,7 @@ function toggleCompleted(elem) {
   else {
     elem.parentElement.classList.toggle("completed");
 
-    //update task to be done
+    // update task to be done
     if (elem.parentElement.classList.contains("completed")) {
       counter--;
       tasksLeft.innerHTML = counter;
@@ -140,7 +140,7 @@ function toggleCompleted(elem) {
   }
 }
 
-//display active
+// display active
 function displayActive() {
   todoArr.forEach((elem) => {
     if (elem.classList.contains("completed")) elem.classList.add("hide");
@@ -152,7 +152,7 @@ function displayActive() {
   });
 }
 
-//display completed
+// display completed
 function displayCompleted() {
   todoArr.forEach((elem) => {
     if (elem.classList.contains("completed")) elem.classList.remove("hide");
@@ -181,12 +181,10 @@ function updateFiltering(target) {
   });
 }
 
-//delete completed tasks
+// delete completed tasks
 function deleteCompleted() {
   todoArr.forEach((elem) => {
     console.log(elem);
     if (elem.classList.contains("completed")) removeCompletedItem(elem);
   });
 }
-
-//
