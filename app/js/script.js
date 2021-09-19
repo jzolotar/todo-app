@@ -1,13 +1,16 @@
-// global variables
+// dom elements
 const taskName = document.querySelector(".header__input");
 const taskList = document.querySelector(".list__background");
 const filters = document.querySelector(".filters");
 const filtersStatus = document.querySelectorAll(".filters__filter");
 const todoElem = document.querySelector(".todo__elem");
 const btnClearCompleted = document.querySelector("delete--completed");
+const tasksLeft = document.querySelector(".tasks--left");
 
+// global variables
 let todoArr = [];
 let todoId = 0;
+let counter = 0;
 let currentFilter = "all";
 
 // add task to list
@@ -19,6 +22,8 @@ taskName.addEventListener("keypress", (e) => {
     if (taskName.value != "") {
       createTask(taskName.value);
       clearInput();
+      counter++;
+      tasksLeft.innerHTML = counter;
     }
   }
 });
@@ -111,10 +116,27 @@ function toggleCompleted(elem) {
   // check if elem is li
   if (elem.classList.contains("todo__elem")) {
     elem.classList.toggle("completed");
+    //update task to be done
+    if (elem.classList.contains("completed")) {
+      counter--;
+      tasksLeft.innerHTML = counter;
+    } else {
+      counter++;
+      tasksLeft.innerHTML = counter;
+    }
   }
   // for any other element we need to use .parentElement
   else {
     elem.parentElement.classList.toggle("completed");
+
+    //update task to be done
+    if (elem.parentElement.classList.contains("completed")) {
+      counter--;
+      tasksLeft.innerHTML = counter;
+    } else {
+      counter++;
+      tasksLeft.innerHTML = counter;
+    }
   }
 }
 
@@ -166,3 +188,5 @@ function deleteCompleted() {
     if (elem.classList.contains("completed")) removeCompletedItem(elem);
   });
 }
+
+//
