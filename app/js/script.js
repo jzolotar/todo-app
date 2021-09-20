@@ -16,6 +16,7 @@ let currentFilter = "all";
 // add task to list
 taskName.addEventListener("keypress", (e) => {
   if (e.charCode === 13) {
+    console.log("test");
     if (taskName.value.replace(/ /g, "").length <= 0) {
       alert("Please fill in the task name");
     }

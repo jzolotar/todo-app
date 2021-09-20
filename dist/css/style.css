@@ -22,6 +22,10 @@ body {
   margin: 0;
 }
 
+body[data-theme="dark"] {
+  background-color: red;
+}
+
 h1,
 h2,
 h3,
@@ -126,6 +130,13 @@ label {
   cursor: pointer;
 }
 
+.main--wrapper {
+  position: absolute;
+  width: 100%;
+  top: 18%;
+  left: 0;
+}
+
 .header {
   height: 22vh;
   background: url("../../images/bg-mobile-dark.jpg") no-repeat center center/cover;
@@ -137,6 +148,15 @@ label {
   max-width: 36rem;
   padding: 0px 30px;
   padding-top: 25px;
+}
+
+.header__icon {
+  background-image: url("../../images/icon-sun.svg");
+  width: 30px;
+  height: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .header__todo {

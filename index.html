@@ -19,11 +19,7 @@
       <div class="header__wrapper">
         <div class="header__info">
           <h1 class="header_title">TODO</h1>
-          <img
-            class="header__icon"
-            src="./images/icon-sun.svg"
-            alt="switch to light mode"
-          />
+          <div class="header__icon"></div>
         </div>
         <div class="header__todo">
           <div class="circle"></div>
@@ -36,35 +32,38 @@
         </div>
       </div>
     </section>
-    <main class="list">
-      <div class="list__wrapper">
-        <ul class="list__background">
-          <!-- <li class ="todo__elem completed">
-            <label class="list__task">
-              <input type="checkbox" />
-              <span class="circle"></span>
-              <span class="task--desc">Text1</span>
-              <span class="close"
-                ><img src="./images/icon-cross.svg" alt=""
-              /></span>
-            </label>
-          </li> -->
-        </ul>
-      </div>
-    </main>
-    <section class="filters">
-      <div class="filters__wrapper">
-        <div class="filters__side">
-          <small><span class="tasks--left">0</span> items left</small>
-          <small class="delete--completed">Clear Completed</small>
+    <div class="main--wrapper">
+      <main class="list">
+        <div class="list__wrapper">
+          <ul class="list__background">
+            <!-- <li class ="todo__elem completed">
+              <label class="list__task">
+                <input type="checkbox" />
+                <span class="circle"></span>
+                <span class="task--desc">Text1</span>
+                <span class="close"
+                  ><img src="./images/icon-cross.svg" alt=""
+                /></span>
+              </label>
+            </li> -->
+          </ul>
         </div>
-        <div class="filters__center">
-          <div class="filters__filter filter--all filter--on">All</div>
-          <div class="filters__filter filter--active">Active</div>
-          <div class="filters__filter filter--completed">Completed</div>
+      </main>
+      <section class="filters">
+        <div class="filters__wrapper">
+          <div class="filters__side">
+            <small><span class="tasks--left">0</span> items left</small>
+            <small class="delete--completed">Clear Completed</small>
+          </div>
+          <div class="filters__center">
+            <div class="filters__filter filter--all filter--on">All</div>
+            <div class="filters__filter filter--active">Active</div>
+            <div class="filters__filter filter--completed">Completed</div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
+
     <script src="./app/js/script.js"></script>
   </body>
 </html>

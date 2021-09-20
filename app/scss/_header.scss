@@ -11,6 +11,15 @@
     padding-top: 25px;
   }
 
+  &__icon {
+    background-image: url("../../images/icon-sun.svg");
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
   &__todo {
     width: 100%;
     display: grid;
