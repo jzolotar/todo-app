@@ -32,6 +32,8 @@ taskName.addEventListener("keypress", (e) => {
 taskList.addEventListener("click", (e) => {
   if (e.target.classList.contains("remove")) {
     removeItem(e.target.parentElement);
+    counter--;
+    tasksLeft.innerHTML = counter;
   }
   if (e.target.classList.contains("list__task")) {
     toggleCompleted(e.target);
