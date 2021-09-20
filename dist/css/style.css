@@ -107,7 +107,7 @@ label {
   display: none;
 }
 
-@media (max-width: 63.9375em) {
+@media (max-width: 39.9375em) {
   .remove {
     display: block;
   }

@@ -31,10 +31,13 @@ taskName.addEventListener("keypress", (e) => {
 
 // add/remove completed class to html element & remove task from list
 taskList.addEventListener("click", (e) => {
+  let tasks = +tasksLeft.innerHTML;
   if (e.target.classList.contains("remove")) {
     removeItem(e.target.parentElement);
-    counter--;
-    tasksLeft.innerHTML = counter;
+    if (tasks > 0) {
+      counter--;
+      tasksLeft.innerHTML = counter;
+    }
   }
   if (e.target.classList.contains("list__task")) {
     toggleCompleted(e.target);
