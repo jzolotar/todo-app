@@ -10,6 +10,16 @@
     padding: 0px 30px;
     padding-top: 25px;
   }
+  &__main {
+    @include breakpoint-up(small) {
+      margin-top: 5.5rem;
+    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
   &__todo {
     width: 100%;

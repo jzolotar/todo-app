@@ -33,7 +33,7 @@ taskList.addEventListener("click", (e) => {
   let tasks = +tasksLeft.innerHTML;
   if (e.target.classList.contains("remove")) {
     removeItem(e.target.parentElement);
-    if (tasks > 0) {
+    if (!e.target.parentElement.contains.classList("completed")) {
       counter--;
       tasksLeft.innerHTML = counter;
     }
