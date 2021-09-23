@@ -33,10 +33,11 @@ taskList.addEventListener("click", (e) => {
   let tasks = +tasksLeft.innerHTML;
   if (e.target.classList.contains("remove")) {
     removeItem(e.target.parentElement);
-    if (!e.target.parentElement.contains.classList("completed")) {
-      counter--;
-      tasksLeft.innerHTML = counter;
-    }
+    // if (!e.target.parentElement.classList.contains("completed")) {
+    //   console.log(e.target.parentElement);
+    //   counter--;
+    //   tasksLeft.innerHTML = counter;
+    // }
   }
   if (e.target.classList.contains("list__task")) {
     toggleCompleted(e.target);
@@ -99,6 +100,10 @@ function clearInput() {
 //remove task
 function removeItem(elem) {
   //remove html markup
+  if (!elem.parentElement.classList.contains("completed")) {
+    counter--;
+    tasksLeft.innerHTML = counter;
+  }
   elem.parentElement.remove();
   //remove elem from todoArr list
   todoArr = todoArr.filter((li) => {
@@ -106,7 +111,7 @@ function removeItem(elem) {
   });
 }
 
-//remove completed task
+//remove completed task - only used while deleting all completed tasks
 function removeCompletedItem(elem) {
   //remove html markup
   elem.remove();
