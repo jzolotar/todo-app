@@ -25,10 +25,6 @@ body {
   margin: 0;
 }
 
-body[data-theme="dark"] {
-  background-color: red;
-}
-
 h1,
 h2,
 h3,
@@ -63,6 +59,14 @@ input {
   text-align: left;
   font-family: "Josefin Sans", sans-serif;
   font-size: 0.92rem;
+
+  .dark-theme & {
+    color: black;
+  }
+}
+
+.dark-theme input {
+  background-color: $veryLightGray;
 }
 input:focus {
   outline: none;
@@ -128,4 +132,8 @@ label {
   width: 100%;
   top: 18%;
   left: 0;
+}
+
+.dark-theme {
+  background-color: $veryLightGrayishBlue;
 }

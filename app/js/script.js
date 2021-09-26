@@ -6,6 +6,7 @@ const filtersStatus = document.querySelectorAll(".filters__filter");
 const todoElem = document.querySelector(".todo__elem");
 const btnClearCompleted = document.querySelector("delete--completed");
 const tasksLeft = document.querySelector(".tasks--left");
+const themeBtn = document.querySelector(".header__icon");
 
 // global variables
 let todoArr = [];
@@ -74,6 +75,10 @@ filters.addEventListener("click", (e) => {
     deleteCompleted();
   }
 });
+
+//change theme
+
+themeBtn.addEventListener("click", () => changeTheme());
 
 // function add task to list
 function createTask(text) {
@@ -198,4 +203,11 @@ function deleteCompleted() {
     console.log(elem);
     if (elem.classList.contains("completed")) removeCompletedItem(elem);
   });
+}
+
+//toggle dark theme
+
+function changeTheme() {
+  const body = document.querySelector("body");
+  body.classList.toggle("dark-theme");
 }

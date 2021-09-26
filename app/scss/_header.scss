@@ -4,6 +4,11 @@
     cover;
   width: 100%;
 
+  .dark-theme & {
+    background: url("../../images/bg-mobile-light.jpg") no-repeat center center /
+      cover;
+  }
+
   &__wrapper {
     margin: 0 auto;
     max-width: 36rem;
@@ -28,6 +33,10 @@
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
+
+    .dark-theme & {
+      background-image: url("../../images/icon-moon.svg");
+    }
   }
 
   &__todo {
@@ -37,6 +46,11 @@
     background-color: $veryDarkDesaturatedBlue;
     border-radius: 5px;
     align-items: center;
+
+    .dark-theme & {
+      background-color: white;
+      color: black;
+    }
   }
 
   &__info {

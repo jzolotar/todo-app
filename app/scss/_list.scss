@@ -9,6 +9,11 @@
     text-align: left;
     border-radius: 5px;
     background-color: $veryDarkDesaturatedBlue;
+
+    .dark-theme & {
+      background-color: white;
+      color: black;
+    }
   }
 
   &__task {

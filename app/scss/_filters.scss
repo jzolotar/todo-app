@@ -17,6 +17,10 @@
     @include breakpoint-up(medium) {
       font-size: 0.92rem;
     }
+    .dark-theme & {
+      background-color: white;
+      color: black;
+    }
   }
   &__center {
     border-radius: 5px;
@@ -36,6 +40,10 @@
       display: flex;
       font-size: 0.85rem;
       background-color: transparent;
+    }
+    .dark-theme & {
+      background-color: white;
+      color: black;
     }
   }
   &__filter {
