@@ -178,7 +178,7 @@ label {
           align-items: center;
 }
 
-@media (min-width: 23em) {
+@media (min-width: 23.5em) {
   .header__main {
     margin-top: 5.5rem;
   }
