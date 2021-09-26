@@ -151,8 +151,20 @@ label {
   width: 100%;
 }
 
+@media (min-width: 23.5em) {
+  .header {
+    background: url("../../images/bg-desktop-dark.jpg") no-repeat center center/cover;
+  }
+}
+
 .dark-theme .header {
   background: url("../../images/bg-mobile-light.jpg") no-repeat center center/cover;
+}
+
+@media (min-width: 23.5em) {
+  .dark-theme .header {
+    background: url("../../images/bg-desktop-light.jpg") no-repeat center center/cover;
+  }
 }
 
 .header__wrapper {
@@ -380,7 +392,6 @@ label {
 }
 
 .dark-theme .filters__center {
-  background-color: white;
   color: black;
 }
 

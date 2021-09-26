@@ -3,10 +3,18 @@
   background: url("../../images/bg-mobile-dark.jpg") no-repeat center center /
     cover;
   width: 100%;
+  @include breakpoint-up(small) {
+    background: url("../../images/bg-desktop-dark.jpg") no-repeat center center /
+      cover;
+  }
 
   .dark-theme & {
     background: url("../../images/bg-mobile-light.jpg") no-repeat center center /
       cover;
+    @include breakpoint-up(small) {
+      background: url("../../images/bg-desktop-light.jpg") no-repeat center
+        center / cover;
+    }
   }
 
   &__wrapper {
