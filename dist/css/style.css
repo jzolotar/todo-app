@@ -393,6 +393,13 @@ label {
 
 .dark-theme .filters__center {
   color: black;
+  background-color: white;
+}
+
+@media (min-width: 40em) {
+  .dark-theme .filters__center {
+    background-color: transparent;
+  }
 }
 
 .filters__filter {

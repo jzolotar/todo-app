@@ -43,6 +43,11 @@
     }
     .dark-theme & {
       color: black;
+      background-color: white;
+
+      @include breakpoint-up(medium) {
+        background-color: transparent;
+      }
     }
   }
   &__filter {
